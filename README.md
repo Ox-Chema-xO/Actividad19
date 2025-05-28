@@ -3,7 +3,7 @@
 #### Integrantes:
 
 - Chacón Roque, Leonardo Alexander 20221002K
-- Condor Chavez Kevin 20172738B
+- Cóndor Chávez Kevin 20172738B
 - Delgado Velarde, Diego Manuel 20222676E
 
 Demostraremos los conceptos y principios fundamentales de IaC utilizando Terraform para gestionar un entorno de desarrollo simulado completamente
