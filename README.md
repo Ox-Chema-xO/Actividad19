@@ -63,8 +63,26 @@ proyecto_iac_local/
 
 1.  **¿Qué es infraestructura?**
       * Explica que, en este contexto local, la "infraestructura" serán directorios, archivos de configuración, scripts y la estructura lógica que los conecta.
+
+         - Servidores/Instancias	(Directorios app1_v1.0.2/, app2_v0.5.0/):	Simulan servidores virtuales.
+         - Recursos de Configuración	(Templates .tpl que crean archivos .json)	Son las onfiguraciones de aplicaciones.
+         - Servicios de Sistema	(Scripts Bash como start_simulated_service.sh):	Inicio y gestión de servicios.
+         - Monitoreo/Logs	(Archivos en logs/):	Es el sistema de observabilidad
+         - Procesos Activos	(Archivos .pid):	Es el control de estado de servicios.
+         - Metadatos de Infraestructura	(Scripts Python + JSON generado):	Es la información de despliegue.
+
+
       * Compara con infraestructura tradicional (servidores físicos, redes) y cloud (VMs, VPCs).
-2.  **¿Qué es infraestructura como código (IaC)?**
+
+      | Concepto | Tradicional | Cloud | Nuestro Proyecto Local |
+      |----------|-------------|-------|-------------------|
+      | *Servidor* | HP ProLiant | EC2 instance | Directorio app1_v1.0.2/ |
+      | *Red* | Switch físico | VPC/Subnet | Estructura de directorios |
+      | *Configuración* | Registry/conf files | User Data | config.json.tpl |
+      | *Monitoreo* | SCOM/Nagios | CloudWatch | Archivos de log |
+      | *Orquestación* | Scripts manuales | Terraform/ARM | main.tf |
+    
+3.  **¿Qué es infraestructura como código (IaC)?**
       * **Configuración manual de infraestructura:**
           * Simula la creación manual de `generated_environment/app1/config.json` y `generated_environment/app1/run.sh`. Discute la propensión a errores, la falta de reproducibilidad y la dificultad para escalar.
       * **Infraestructura como código:**
